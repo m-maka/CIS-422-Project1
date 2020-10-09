@@ -16,18 +16,21 @@ def read(file):
     opens and reads the gpx file,
     and exports the relevant information.
     '''
-    gpx_file = open(file ,'r')
+    with open(file ,'r') as gpx_file:
 
-    gpx = gpxpy.parse(gpx_file)
+        gpx = gpxpy.parse(gpx_file)
 
-    for track in gpx.tracks:
-        for segment in track.segments:
-            for point in segment.points:
-                print(f'Point at ({point.latitude}, {point.longitude}) -> {point.elevation}')
-    return
+        latlongs = []
+
+        for track in gpx.tracks:
+            for segment in track.segments:
+                for point in segment.points:
+                    latlongs.append((point.latitude, point.longitude))
+    print(latlongs)
+    return latlongs
 
 def main():
-    read('09_27_20.gpx')
+    read('small.gpx')
 
 if __name__ == '__main__':
     main()
