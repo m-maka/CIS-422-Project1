@@ -13,3 +13,4 @@ Project 1 will convert a record consisting of a sequence of coordinates into a l
 ## Subdirectory Information
 
 src: Contains all the python files for the source code
+documents: Contains text files of all documentation for the project

@@ -1,0 +1,1 @@
+Document to explain and list important components and aspects of the project by listing what they do, and how they connect and interact with each other
