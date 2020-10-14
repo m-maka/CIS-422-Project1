@@ -1,8 +1,25 @@
 '''
 Authors: Max Aguirre, Brandon Bower, Mapuana Maka
 
-This file converts pairs of lattitude and longitude values into the UTM 
-Coordinate System. It also calculates the distance between UTM points.
+This file contains the following functios:
+
+to_utm_list: Takes a list of points (tuples of lattitude and longitude)
+and converts them to the UTM Coordinate System, with a small modification
+to better apply it for the purposes of the Reverse Geocoding app.
+
+calculate_utm_distances: Takes in a list of points in the "modified" UTM
+system (as outputed by the above method), calculates the distance between
+each pair of points, and outputs the distances, in meters, as a list.
+
+calculate_latlong_distances: Takes a list of points (tuples of lattitude 
+and longitude),  calculates the distance between each pair of points, and 
+outputs the distances, in meters, as a list.
+
+NOTE: calculate_utm_distances and calculate_latlong_distances have a very
+similar functionality, but when testing, there is a difference of 1 cm every
+15 meters. We have not done enough testing to determine which is the most
+accurrate result, so for the time being, I recommend using 
+calculate_latlong_distances.
 
 '''
 
@@ -75,10 +92,35 @@ def calculate_utm_distances(utm_list):
 	return utm_distance_list
 
 
+def calculate_latlong_distances(latlong_list):
+	'''
+	This function calculates the distance between each pair of points
+	using the geopy.distance module, converted to meters.
+
+	Input: A list of point coordinates in the form longitude/lattitude
+
+	Output: A list of values, in meters, representing the distance between
+	each pair of points.
+	'''
+
+	# Empty list of distances: Value at index n holds the distance between
+	# point n and point n + 1
+	latlong_distance_list = []
+
+	for i in range(len(latlong_list) - 1):
+
+		p1 = latlong_list[i]
+		p2 = latlong_list[i+1]
+
+		# Get each "triangle side" to use with the Pythagorean Theorem
+		latlong_distance_list.append(geopy.distance.distance(p1, p2).km * 1000)
+
+	return latlong_distance_list
+
+
 def main:
 	# Main function that will do a thing
 	# Or not, it may not even exist. Depends.
 
 if __name__ == '__main__':
 	main()
-	
