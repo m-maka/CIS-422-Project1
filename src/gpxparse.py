@@ -8,7 +8,6 @@ from, a GPX file in order to reverse geocode a route.
 '''
 
 import gpxpy
-#import gpxpy.gpx
 
 def read(file):
     '''
@@ -19,6 +18,7 @@ def read(file):
     with open(file ,'r') as gpx_file:
 
         gpx = gpxpy.parse(gpx_file)
+        gpx.simplify()
 
         latlongs = []
 

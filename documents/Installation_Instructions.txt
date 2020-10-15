@@ -1,7 +1,7 @@
 ==Project 1 Installation Instructions==
 
 --Program Authors--
-Max Acguirre
+Max Aguirre
 Brandon Bower
 Mapuana Maka
 
@@ -10,3 +10,4 @@ Install python
 https://python.org/downloads/
 
 --Step Two--
+(Do the following steps differ depending on the OS?)
