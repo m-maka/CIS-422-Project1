@@ -5,7 +5,7 @@ Authors: Brandon Bower along with Max Aguirre and Mapuana Maka
 
 import googlemaps
 
-def turnDetect(client, latlongs):
+def getDirections(client, segments):
     #result = client.directions(latlongs[0], latlongs[1])
     #print(result)
 
@@ -18,17 +18,21 @@ def createSegments(latlongs):
     index = 0
     segments = []
     for segment in range(segNumb):
-        print(f'start (index {index})')
-        #segments.append({'start' : latlongs[index]})
-        waypoint = 1
+        #print(f'start (index {index})')
+        segments.append({'start' : latlongs[index]})
+        #wp = 1
+        waypoints = []
+        index += 1
         for index in range(index, min(index + 10,length - 2)):
+            #print(f'wp, {wp} (index {index})')
+            #wp += 1
+            waypoints.append(f'via:{latlongs[index]}')
+        if len(waypoints):
+            segments[segment]['waypoints'] = waypoints
             index += 1
-            print(f"w{waypoint}, (index {index})")
-            waypoint += 1
-        if waypoint:
-            index += 1
-        print(f'end (index {index})')
-        #segments[segment]['end'] = latlongs[index] 
+        #print(f'end (index {index})')
+        segments[segment]['end'] = latlongs[index]
+    return segments
     
     
     
@@ -36,7 +40,6 @@ def createSegments(latlongs):
 
 
 def main():
-    '''
     latlongs = [(44.2185374, -123.2125012), (44.21857, -123.21163),
                 (44.21898, -123.21158), (44.2190527, -123.2089076),
                 (44.2225, -123.20905), (44.2223507, -123.2147348),
@@ -51,7 +54,8 @@ def main():
                 (44.616905, -123.26915), (44.616951, -123.274727), (44.6172449, -123.275269),
                 (44.618179, -123.275856), (44.618835, -123.275887), (44.6216579, -123.275101),
                 (44.622791, -123.274361),(44.62421, -123.27401), (44.626221, -123.27269)]
-    #gmaps = googlemaps.Client(key='Your Key Here')
+    '''
+    #gmaps = googlemaps.Client(key='You Key Here')
     segments = createSegments(latlongs)
     #turnDetect(gmaps, segments)
 
