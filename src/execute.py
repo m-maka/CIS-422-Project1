@@ -21,7 +21,7 @@ def main():
     # Ask for Google API key
     gmaps = googlemaps.Client(key='Your Key Here')
     
-	# Divide the track into smaller segments that the Google API can work with
+    # Divide the track into smaller segments that the Google API can work with
     segments = findturns.createSegments(coordinates)
 
     # Get directions for the created track segments
