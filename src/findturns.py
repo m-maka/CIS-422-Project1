@@ -34,9 +34,9 @@ def getDirections(client, segments):
     directions = []
     for segment in segments:
         if 'waypoints' in segment.keys():
-            directions.append(client.directions(segment['start'], segment['end'], None, segment['waypoints']))
+            directions.append(client.directions(segment['start'], segment['end'], "bicycling", segment['waypoints']))
         else:
-             directions.append(client.directions(segment['start'], segment['end']))
+             directions.append(client.directions(segment['start'], segment['end'], "bicycling"))
     print(directions)
 
     return  directions
@@ -75,13 +75,13 @@ def createSegments(latlongs):
             #print(f'wp, {wp} (index {index})')
             #wp += 1
             waypoints.append(f'via:{latlongs[index][0]},{latlongs[index][1]}')
-            waypoints.append(latlongs[index])
         
         if len(waypoints):
             segments[segment]['waypoints'] = waypoints
             index += 1
         #print(f'end (index {index})')
         segments[segment]['end'] = latlongs[index]
+    #print(segments)
     return segments
 
 
