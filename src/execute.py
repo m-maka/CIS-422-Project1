@@ -11,15 +11,15 @@ import findturns
 
 def main():
 
-	# I assume the file will be fetched differently at the end. ~ Max
-	file = "small.gpx"
-
-	# Read the gpx file and turn it into a list of Lattitude/Longitude
-	# Coordinates
-	coordinates = gpxparse,read(file)
-
-	# Ask for Google API key
-	gmaps = googlemaps.Client(key='Your Key Here')
+    # I assume the file will be fetched differently at the end. ~ Max
+    file = "small.gpx"
+    
+    # Read the gpx file and turn it into a list of Lattitude/Longitude
+    # Coordinates
+    coordinates = gpxparse,read(file)
+    
+    # Ask for Google API key
+    gmaps = googlemaps.Client(key='Your Key Here')
     
 	# Divide the track into smaller segments that the Google API can work with
     segments = findturns.createSegments(coordinates)
