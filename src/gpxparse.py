@@ -26,12 +26,6 @@ def read(file):
             for segment in track.segments:
                 for point in segment.points:
                     latlongs.append((point.latitude, point.longitude))
-    print(latlongs)
+                    
     return latlongs
-
-def main():
-    read('small.gpx')
-
-if __name__ == '__main__':
-    main()
     
