@@ -6,3 +6,5 @@ Flask-WTF==0.14.3
 Jinja2==2.11.2
 Werkzeug==1.0.1
 urllib3==1.25.9
+gpxpy==1.4.2
+googlemaps==4.4.2
