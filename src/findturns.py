@@ -14,12 +14,32 @@ def parseDirections(directions):
     Takes a list of directions from the Google Maps Directions api, and parses
     out the relevant directional info that a human needs/can read
 
-    returns a list of (distance of direction, direction to be done) tuples
+    returns a list of (distance of direction, direction to be done, total distance traveled) tuples
     '''
     instructions = []
+    miles = 0.00
+    feet = 0
     for segment in directions:
         for step in segment[0]['legs'][0]['steps']:
-            instructions.append((step['distance']['text'], step['html_instructions']))
+            #instructions.append((step['distance']['text'], step['html_instructions']))
+            distance = step['distance']['text']
+            line = step['html_instructions']
+
+            # remove destination messages
+            index = line.find('<d')
+            if index != -1:
+                line = line[:index]
+                
+            # creat tuple for each intsruction
+            instructions.append((distance, line, f"{miles} mi"))
+
+            # update running total
+            numb, units = distance.split()
+            numb = float(numb)
+            if units == 'ft':
+                # convert feet to miles
+                numb = numb/5280
+            miles = round(miles + numb, 2)
 
     return instructions
 
