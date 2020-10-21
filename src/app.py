@@ -1,5 +1,5 @@
 import os
-import gpxpy 
+import execute
 from flask import Flask, render_template, request, redirect, url_for, abort, send_from_directory
 from werkzeug.utils import secure_filename
 
@@ -21,7 +21,9 @@ def upload_files():
         file_ext = os.path.splitext(filename)[1]
         if file_ext not in app.config['UPLOAD_EXTENSIONS']:
             abort(400)
-        uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], filename))
+        full_path = os.path.join(app.config['UPLOAD_PATH'], filename)
+        uploaded_file.save(full_path)
+        
     return redirect(url_for('index'))
 
 @app.route('/uploads/<filename>')
@@ -41,27 +43,7 @@ def upload(filename):
     return send_from_directory(app.config['UPLOAD_PATH'], filename)
 
 #
-'''
-def read(filename):
-    
-    takes in a path to a gpx file in the form of a string,
-    opens and reads the gpx file,
-    and exports the relevant information.
-    
-    with open(filename ,'r') as gpx_file:
 
-        gpx = gpxpy.parse(gpx_file)
-        gpx.simplify()
-
-        latlongs = []
-
-        for track in gpx.tracks:
-            for segment in track.segments:
-                for point in segment.points:
-                    latlongs.append((point.latitude, point.longitude))
-    print(latlongs)
-    return latlongs
-'''
 
 if __name__ == '__main__':
    app.run(debug = True)
