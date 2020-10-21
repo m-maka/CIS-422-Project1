@@ -18,6 +18,10 @@ To make the conversion into directions, the program makes use of the Google Maps
 
 The program then outputs a list of directions to the user, which can be used to retrace the route that generated the GPX file.
 
+## Build Process Summary
+
+The following section briefly describes the build process for the application.
+
 ## Subdirectory Information
 
 src: Contains all python files for the source code of the program.
