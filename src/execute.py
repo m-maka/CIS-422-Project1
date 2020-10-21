@@ -9,14 +9,11 @@ of directions/instructions for the inputed track.
 import gpxparse
 import findturns
 
-def main():
-
-    # I assume the file will be fetched differently at the end. ~ Max
-    file = "small.gpx"
+def execute(filename):
     
     # Read the gpx file and turn it into a list of Lattitude/Longitude
     # Coordinates
-    coordinates = gpxparse.read(file)
+    coordinates = gpxparse.read(filename)
     
     # Ask for Google API key
     gmaps = findturns.googlemaps.Client(key='Your Key Here')

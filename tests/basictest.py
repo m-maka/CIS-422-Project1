@@ -8,7 +8,11 @@ To keep things organized and concise, special cases will be tested on separate
 files
 '''
 
-# import sys
+import sys
+
+sys.path.insert(0, '../src/')
+
+import execute.py
 
 def test1():
 
