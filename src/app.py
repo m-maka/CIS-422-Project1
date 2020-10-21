@@ -24,20 +24,9 @@ def upload_files():
         full_path = os.path.join(app.config['UPLOAD_PATH'], filename)
         uploaded_file.save(full_path)
         #execute function will pass the file path in and use it to open/read the file
-        flask.g.result = execute(full_path)
+        flask.g.result = execute.execute(full_path)
 
     return redirect(url_for('index'))
-
-#execute function called in upload_files() 
-def execute(file_path):
-    #call execute function
-    #find some way to integrate execute function. 
-    # Could move whole main into this function and run
-
-    return 'result form ???'.join(<text>)
-    
-
-#
 
 
 if __name__ == '__main__':
