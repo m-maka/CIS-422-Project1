@@ -23,24 +23,19 @@ def upload_files():
             abort(400)
         full_path = os.path.join(app.config['UPLOAD_PATH'], filename)
         uploaded_file.save(full_path)
-        
+        #execute function will pass the file path in and use it to open/read the file
+        flask.g.result = execute(full_path)
+
     return redirect(url_for('index'))
 
-@app.route('/uploads/<filename>')
-def upload(filename):
-    with open(filename ,'r') as gpx_file:
+#execute function called in upload_files() 
+def execute(file_path):
+    #call execute function
+    #find some way to integrate execute function. 
+    # Could move whole main into this function and run
 
-        gpx = gpxpy.parse(gpx_file)
-        gpx.simplify()
-
-        latlongs = []
-
-        for track in gpx.tracks:
-            for segment in track.segments:
-                for point in segment.points:
-                    latlongs.append((point.latitude, point.longitude))
-    print(latlongs)
-    return send_from_directory(app.config['UPLOAD_PATH'], filename)
+    return 'result form ???'.join(<text>)
+    
 
 #
 
