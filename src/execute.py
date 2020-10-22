@@ -27,8 +27,8 @@ def execute(filename):
     # Convert the directions into instructions that are easier to read
     instructions = findturns.parseDirections(directions)
 
-    # Print the instructions
-    print(instructions)
+    # Return the instructions
+    return instructions
 
 
 if __name__ == '__main__':

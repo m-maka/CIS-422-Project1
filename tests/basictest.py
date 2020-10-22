@@ -12,7 +12,7 @@ import sys
 
 sys.path.insert(0, '../src/')
 
-import execute.py
+import execute
 
 def test1():
 
