@@ -6,6 +6,9 @@ Running this file will test the application for basic functionality, such as:
 
 To keep things organized and concise, special cases will be tested on separate 
 files
+
+NOTE: Because of the use of the way this file is set up and how sys is used
+to find the right path, this test file MUST be run in its "test" directory.
 '''
 
 import sys

@@ -9,14 +9,16 @@ of directions/instructions for the inputed track.
 import gpxparse
 import findturns
 
-def execute(filename):
+def execute(filename, apikey):
     
     # Read the gpx file and turn it into a list of Lattitude/Longitude
     # Coordinates
     coordinates = gpxparse.read(filename)
     
-    # Ask for Google API key
-    gmaps = findturns.googlemaps.Client(key='your key here')
+    # Read Google API key from text file and insert it
+    keyfile = open(apikey)
+    key = keyfile.read().replace("\n", " ")
+    gmaps = findturns.googlemaps.Client(key=key)
     
     # Divide the track into smaller segments that the Google API can work with
     segments = findturns.createSegments(coordinates)
@@ -32,7 +34,4 @@ def execute(filename):
 
     # Return the instructions
     return instructions
-
-
-if __name__ == '__main__':
-    main()
+    
