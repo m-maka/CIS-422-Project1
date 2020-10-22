@@ -1,1 +1,15 @@
-Document to explain and list important components and aspects of the project by listing what they do, and how they connect and interact with each other
+Document to explain and list important components and aspects of the project by listing what they do, and how they connect and interact with each other.
+
+# Program Organization
+
+This section explains how the application is organized and how the components work with each other.
+
+# Testing
+
+The "test" directory contains files that can be used for testing the source code.
+
+# Future Development and other versions
+
+This program started out by attempting to run a binary search on a set of points to pinpoint a turn, to then be able to recognize the path that was taken and translate it into instructions. Due to limitations with the geocoding services that we found available to us, we then proceeded to change approach and use the Google Maps API.
+
+There is a directory called version-0-files, which contains some of the set-up that was being done for this approach. We have included them in the repository to provide as much insight on that as we can, in case someone wishes to modify the current version and could use an idea of what we tried to do.
