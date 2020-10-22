@@ -16,7 +16,7 @@ def execute(filename):
     coordinates = gpxparse.read(filename)
     
     # Ask for Google API key
-    gmaps = findturns.googlemaps.Client(key='Your Key Here')
+    gmaps = findturns.googlemaps.Client(key='AIzaSyA9gXP5V2ArFBYTIdN9nwvo0B8tX_9EhJM')
     
     # Divide the track into smaller segments that the Google API can work with
     segments = findturns.createSegments(coordinates)
