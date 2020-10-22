@@ -27,6 +27,9 @@ def execute(filename):
     # Convert the directions into instructions that are easier to read
     instructions = findturns.parseDirections(directions)
 
+    # Turn instructions into a text file
+    findturns.instructionsToText(instructions)
+
     # Return the instructions
     return instructions
 

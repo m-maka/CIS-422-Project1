@@ -9,6 +9,16 @@ Powered by Google Maps
 
 import googlemaps
 
+def instructionsToText(instructions):
+    '''
+    Takes in the instructions list created by parseDirections
+    and writes it to a text file, in a readable HTML form
+    '''
+    with open("uploads/directions.txt", 'w') as directions:
+        for line in instructions:
+            directions.write(f"{line[2]}: {line[1]} and travel for {line[0]}\n")
+        
+
 def parseDirections(directions):
     '''
     Takes a list of directions from the Google Maps Directions api, and parses
