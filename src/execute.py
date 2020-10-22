@@ -18,6 +18,7 @@ def execute(filename, apikey):
     # Read Google API key from text file and insert it
     keyfile = open(apikey)
     key = keyfile.read().replace("\n", " ")
+    keyfile.close()
     gmaps = findturns.googlemaps.Client(key=key)
     
     # Divide the track into smaller segments that the Google API can work with
