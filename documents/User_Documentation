@@ -22,7 +22,7 @@ Our application only works with .gpx files, tracks in other forms will not work.
 Currently the way the program reads the gpx file, all of its contents are considered as one long track. If the gpx file holds multiple tracks, they will be treated as one
 long track for the purposes of creating a cue sheet
 
-### Unkown paths/roads
+### Unknown paths/roads
 Our application is powered by Google. A result of this is if Google doesn't recognize a path/road taken in the track, 
 the outputted cue sheet results will vary and cannot be guaranteed as accurate.
 
