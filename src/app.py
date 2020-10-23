@@ -21,6 +21,7 @@ def execute(filename, apikey):
     # Read Google API key from text file and insert it
     keyfile = open(apikey)
     key = keyfile.read().replace("\n", " ")
+    keyfile.close()
     gmaps = findturns.googlemaps.Client(key=key)
     
     # Divide the track into smaller segments that the Google API can work with
@@ -29,14 +30,7 @@ def execute(filename, apikey):
     # Get directions for the created track segments
     directions = findturns.getDirections(gmaps, segments)
 
-    # Convert the directions into instructions that are easier to read
-    instructions = findturns.parseDirections(directions)
-
-    # Turn instructions into a text file
-    findturns.instructionsToText(instructions)
-
-    # Return the instructions
-    return instructions
+    return directions 
 
 
 ################################################################
@@ -62,7 +56,7 @@ def upload_files():
         full_path = os.path.join(app.config['UPLOAD_PATH'], filename)
         uploaded_file.save(full_path)
         #execute function will pass the file path in and use it to open/read the file
-        g.results = execute(full_path, API_KEY)
+        g.results = execute(full_path, api_key)
     return render_template('display.html')
 
 
