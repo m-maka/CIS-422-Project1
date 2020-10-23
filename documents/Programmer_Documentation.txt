@@ -5,7 +5,7 @@ Document to explain and list important components and aspects of the project by 
 ## Files 
 ### Folders
 The outer section of the program is split into 3 files:
-'tests': contains all code/files related to testing the application
+'tests': contains all code/files related to testing the application, including the instructions/documentation on how to run the tests
 'documents': contains the documentation on the authors of the program, as well as the detailed programmer and user manuals
 'version-0': contains information about the first version of the applictaion, in which we were planning to use binary search instead of routing.
 'src': contains the app
