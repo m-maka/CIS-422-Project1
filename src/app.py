@@ -53,8 +53,7 @@ def upload_files():
     uploaded_file = request.files['file']
     # Holds 
     filename = secure_filename(uploaded_file.filename)
-    if filename == '':
-        flash("No file selected")
+    if filename != '':
         file_ext = os.path.splitext(filename)[1]
         if file_ext not in app.config['UPLOAD_EXTENSIONS']:
             #Redirect to index if not a gpx file
