@@ -5,6 +5,18 @@ Max Aguirre
 Brandon Bower
 Mapuana Maka
 
+--Prerequisites--
+1. You will need a Google API key to use this application. If you do not have one, it can be obtained here:
+    https://developers.google.com/maps/gmp-get-started
+
+2. Press the button that says "Get Started" and follow the steps
+
+3. Make sure your API key is ENABLED for use with the Google Directions API 
+
+
+--Once you have completed the Prerequisites, follow the steps below to run the application.--
+
+
 --Step 1--
 Clone this repository using the following command:
     'git clone https://github.com/m-maka/CIS-422-Project1.git'
