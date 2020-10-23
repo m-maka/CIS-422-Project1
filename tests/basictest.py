@@ -7,7 +7,7 @@ Running this file will test the application for basic functionality, such as:
 To keep things organized and concise, special cases will be tested on separate 
 files
 '''
-
+import os.path
 import execute
 
 def test1():
@@ -77,6 +77,21 @@ def abort():
 
 def main():
 
+	# Check if files are present
+	if not (os.path.exists("2017_GONG_Ride_25_Mile_Route.gpx")
+		and os.path.exists("2017_GONG_Ride_50_Mile_Route.gpx")
+		and os.path.exists("2019_GONG_Ride.gpx")
+		and os.path.exists("test1result.txt")
+		and os.path.exists("test2result.txt")
+		and os.path.exists("test3result.txt")
+		and os.path.exists("test3result2.txt")
+		and os.path.exists("execute.py")
+		and os.path.exists("key.txt")):
+
+		print("Missing files. Aborting...")
+		exit()
+
+	# Set initial testing conditions
 	test1_success = None
 	test2_success = None
 	test3_success = None
