@@ -1,0 +1,28 @@
+
+Powered by Google.
+
+Testing files from http://www.gongride.com/
+
+Testing instructions:
+
+0: Make sure all of the following files are in the directory:
+	- "2017_GONG_Ride_25_Mile_Route.gpx"
+	- "2017_GONG_Ride_50_Mile_Route.gpx"
+	- "2019_GONG_Ride.gpx"
+	- "test1result.txt"
+	- "test2result.txt"
+	- "test3result.txt"
+	- "basictest.py"
+	- "execute.py"
+
+Also make sure that, if you are going to test outside of the repository, that you cooy the src directory into the same directory where this tests directory will be located.
+
+0.5: While there is an execute function in the app.py file in src, this one helps run these tests without needing the flask program, but still using the source code.
+
+1: Copy your API Key into a text file, name it "key.txt", and save it in this "tests" directory. We also advise to add it to gitignore if you're working on the repository.
+
+2: One you run basictest.py with the Python3 command, you will be asked whether you want to run test 1, skip it, or abort testing. The same will happen for the following tests.
+
+3: At the end, if the results still match the expected output, You'll be told whether the tests were succesful, failures, or if they didn't take place at all.
+
+Disclaimer: Since our program relies on the Google Maps API, these tests should work well, for being on a well defined route. Google might not recognize paths that are 
