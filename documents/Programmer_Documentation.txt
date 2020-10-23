@@ -25,7 +25,7 @@ specifically 'src'contains:
 'venv': contains information related to the virtual environment
 'src' also contains the python files that make up the application, as well as files needed for installation
 
-### Files
+### Program Files
 'gpxparse.py': handles everything related to the conversion of a gpx file into a list of (lat, long) tuples
 'findturns.py': handels taking the lat longs from gpxparse, and converting them into instructions a human can read
 'app.py': is the main driver of the program, it stores the information to run the Flask app, and makes the calls to 'gpxparse.py' and 'findturns.py'
