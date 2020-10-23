@@ -2,7 +2,49 @@ Document to explain and list important components and aspects of the project by 
 
 # Program Organization
 
-This section explains how the application is organized and how the components work with each other.
+## Files 
+### Folders
+The outer section of the program is split into 3 files:
+'tests' contains all code/files related to testing the application
+'documents' contains the documentation on the authors of the program, as well as the detailed programmer and user manuals 
+'src' contains the app
+specifically 'src'contains:
+'__pychache__', the cache for the virtual environment
+'static' which contains the 'Powered By Google' image for use within the Flask application
+'templates' which contains 'index.html' the landing page of the Flask application and 'display.html' the webpage used to show the direction results
+'uploads' which is used by Flask to store the gpx files uploaded by users
+'venv' which contains information related to the virtual environment
+### Python files
+The program is made up of three main files: 
+'gpxparse.py', which handles the conversion of a gpx file into a list of (lat, long) tuples
+'findturns.py' which handels taking the lat longs from gpxparse, and converting them into instructions a human can read
+'app.py' is the main driver of the program, it stores the information to run the Flask app, and makes the calls to 'gpxparse.py' and 'findturns.py'
+
+## Functions
+### gpxparse.py
+gpxparse only contains one function, 'read' which takes in a path to a gpx file, so it can then read that file, extract the lat long points,
+and return them as a list of tuples of the form [(lat,long), ... ] gpxparse does this utilizing the 'parse' and 'simplify' methods from the gpxpy library
+
+### findturns.py
+findturns contains 4 functions:
+'createSegments': Our method for reverse geocoding a route is to take the points from the track, and use them as the start, end, and waypoints of a Google Maps Directions
+request. Google Maps only allows for a maximum of 25 waypoints, so the track must first be divided in separate sections. 'createSegments' figures out what points in the
+track should be start, end, or waypoints in the final request(s), and formats them as a list of dictionaries, where each dictionary corresponds to a segment of the route
+and is of the form: {'start': (lat,long), 'waypoints': ['via:lat,long', ...], 'end': (lat,long)}
+'getDirections': takes the dictionaries created by 'createSegments' and uses them to make requests to the Google Maps Directions api, using the googlemaps module.
+The directions for each segment are appended to a list and then returned
+'parseDirections': takes the list of data returned from Google, and parses out only what is relevant to the application. Specifically the distance of the instruction,
+as well as the HTML version of the instruction, for each step. The HTML tags are then removed, and the distance is used to calculate total distance traveled. This information is 
+returned in a list of tuples: [(distance of the instruction, the instruction, total distance traveled), ... ]
+'directionsToString' takes the list of tuples returned by 'parseDirections' and converts it to one large string, with a bit of formatting, so that it can be displayed by Flask. 
+
+### app.py
+app contains 3 functions:
+'index': Creates the initial landing page for the Flask application, and returns a template to be rendered by Flask
+'upload_files': handles the uploading of a gpx file, and passes the file information to 'execute'
+'execute': processes the gpx file, recieved from 'upload_files', by passing it through gpxparse and find turns in the order of 
+read -> createSegments -> getDirections -> parseDirections -> directionsToString
+'execute' returns the string from 'directionsToString' to Flask, for use with the 'display.html' template
 
 # Testing
 
