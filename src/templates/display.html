@@ -5,11 +5,8 @@
     <title>GPX File Directions</title>
   </head>
   <body>
-    <div class="bd-example" align="middle">
-        <img src="{{url_for('static', filename='google.png')}}align="middle" />
-    </div>
-
+        <img src="{{url_for('static', filename='google.png')}}" />
     <h1>Directions</h1>
-    <p>{{ g.result }}</p>
+    <p>{{ g.results }}</p>
   </body>
 </html>
