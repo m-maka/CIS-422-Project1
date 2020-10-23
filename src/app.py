@@ -6,12 +6,14 @@ from flask import Flask, render_template, request, redirect, url_for, abort, sen
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+app.config.from_object(__name__)
+app.config.from_envvar('APP_CONFIG_FILE', silent=True)
+
+API_KEY = app.config['API_KEY']
+
+
 app.config['UPLOAD_EXTENSIONS'] = set(['.gpx'])
 app.config['UPLOAD_PATH'] = 'uploads'
-app.secret_key = setting.COOKIE_KEY
-app.KEY = setting.API_KEY
-
-
 ################################################################
 # API functions for Flask App
 ################################################################
@@ -21,7 +23,7 @@ def execute(filename):
     coordinates = gpxparse.read(filename)
     
     # Create Google client to use Google api
-    gmaps = findturns.googlemaps.Client(key=app.KEY)
+    gmaps = findturns.googlemaps.Client(key=API_KEY)
     
     # Divide the track into smaller segments that the Google API can work with
     segments = findturns.createSegments(coordinates)
@@ -65,6 +67,7 @@ def upload_files():
         g.results = execute(full_path)
     return render_template('display.html')
 
-
+'''
 if __name__ == '__main__':
    app.run(debug = True)
+'''
