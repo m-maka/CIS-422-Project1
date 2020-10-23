@@ -1,6 +1,11 @@
-This will be a startup guide of how to use the program. Read through and follow the steps to get started with the program and understand how to use it correctly
+This is a startup guide of how to use the program. Read through and follow the steps to get started with the program and understand how to use it correctly.
 
-# Once you have your server running
+# Using the program
+
+## Installation
+To get your server up and running, follow the instructions in 'documents/Installation_instructions.txt'
+
+## Once you have your server running
 Once your server is running, navigate to 'localhost:5000' in your preferred web browser.
 You should see a button marked 'Choose File', click this and navigate to the .gpx file that you want to convert into a cue sheet. Select it, and click open.
 If you have completed this step correctly, you should now see the title of your chosen file next to the Choose File button(as opposed to 'No file chosen').
@@ -9,6 +14,13 @@ After a brief processing time, you will be presented with your cue sheet. Curren
 paste them to a file of your choosing.
 
 # Known issues/limitations
+
+### gpx only
+Our application only works with .gpx files, tracks in other forms will not work.
+
+### gpx files are considered as one track
+Currently the way the program reads the gpx file, all of its contents are considered as one long track. If the gpx file holds multiple tracks, they will be treated as one
+long track for the purposes of creating a cue sheet
 
 ### Unkown paths/roads
 Our application is powered by Google. A result of this is if Google doesn't recognize a path/road taken in the track, 
