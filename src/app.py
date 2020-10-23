@@ -51,7 +51,7 @@ def index():
 def upload_files():
     # Holds the submitted file object
     uploaded_file = request.files['file']
-    # Holds 
+    # Holds the secured filename
     filename = secure_filename(uploaded_file.filename)
     if filename != '':
         file_ext = os.path.splitext(filename)[1]
