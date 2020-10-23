@@ -58,8 +58,14 @@ def test3():
 	expected = t_3_result.read()
 	t_3_result.close()
 
+	# Note: This route's directions are a little weird
+	# So I will test a second possibility.
+	t_3_result2 = open("test3result2.txt")
+	expected2 = t_3_result2.read()
+	t_3_result2.close()
+
     # Compare actual and expected output
-	if output == expected:
+	if output == expected or output == expected2:
 		success = True
 
 	return success
