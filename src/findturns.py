@@ -32,7 +32,6 @@ def parseDirections(directions):
     feet = 0
     for segment in directions:
         for step in segment[0]['legs'][0]['steps']:
-            #instructions.append((step['distance']['text'], step['html_instructions']))
             distance = step['distance']['text']
             line = step['html_instructions']
 
