@@ -5,20 +5,21 @@ Document to explain and list important components and aspects of the project by 
 ## Files 
 ### Folders
 The outer section of the program is split into 3 files:
-'tests' contains all code/files related to testing the application
-'documents' contains the documentation on the authors of the program, as well as the detailed programmer and user manuals 
-'src' contains the app
+'tests': contains all code/files related to testing the application
+'documents': contains the documentation on the authors of the program, as well as the detailed programmer and user manuals
+'version-0': contains information about the first version of the applictaion, in which we were planning to use binary search instead of routing.
+'src': contains the app
 specifically 'src'contains:
-'__pychache__', the cache for the virtual environment
-'static' which contains the 'Powered By Google' image for use within the Flask application
-'templates' which contains 'index.html' the landing page of the Flask application and 'display.html' the webpage used to show the direction results
-'uploads' which is used by Flask to store the gpx files uploaded by users
-'venv' which contains information related to the virtual environment
+'__pychache__': the cache for the virtual environment
+'static': which contains the 'Powered By Google' image for use within the Flask application
+'templates': which contains 'index.html' the landing page of the Flask application and 'display.html' the webpage used to show the direction results
+'uploads': which is used by Flask to store the gpx files uploaded by users
+'venv': which contains information related to the virtual environment
 ### Python files
 The program is made up of three main files: 
-'gpxparse.py', which handles the conversion of a gpx file into a list of (lat, long) tuples
-'findturns.py' which handels taking the lat longs from gpxparse, and converting them into instructions a human can read
-'app.py' is the main driver of the program, it stores the information to run the Flask app, and makes the calls to 'gpxparse.py' and 'findturns.py'
+'gpxparse.py': which handles the conversion of a gpx file into a list of (lat, long) tuples
+'findturns.py': which handels taking the lat longs from gpxparse, and converting them into instructions a human can read
+'app.py': is the main driver of the program, it stores the information to run the Flask app, and makes the calls to 'gpxparse.py' and 'findturns.py'
 
 ## Functions
 ### gpxparse.py
