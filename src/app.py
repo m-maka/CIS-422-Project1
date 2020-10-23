@@ -1,12 +1,14 @@
 import os
 import gpxparse
 import findturns
+import setting 
 from flask import Flask, render_template, request, redirect, url_for, abort, send_from_directory, g, flash 
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config['UPLOAD_EXTENSIONS'] = set(['.gpx'])
 app.config['UPLOAD_PATH'] = 'uploads'
+app.KEY = setting.API_KEY
 
 
 ################################################################
@@ -18,7 +20,7 @@ def execute(filename):
     coordinates = gpxparse.read(filename)
     
     # Create Google client to use Google api
-    gmaps = findturns.googlemaps.Client(key=KEY)
+    gmaps = findturns.googlemaps.Client(key=app.KEY)
     
     # Divide the track into smaller segments that the Google API can work with
     segments = findturns.createSegments(coordinates)
