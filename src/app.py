@@ -11,7 +11,6 @@ app.config.from_envvar('APP_CONFIG_FILE', silent=True)
 
 API_KEY = app.config['API_KEY']
 
-
 app.config['UPLOAD_EXTENSIONS'] = set(['.gpx'])
 app.config['UPLOAD_PATH'] = 'uploads'
 ################################################################
