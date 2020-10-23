@@ -6,37 +6,51 @@ Brandon Bower
 Mapuana Maka
 
 --Prerequisites--
-1. You will need a Google API key to use this application. If you do not have one, it can be obtained here:
+1. Make sure you have Python 3 installed. This application was written using Python 3.8.6 and later, it can be obtained here:
+    https://www.python.org/downloads/release/python-386/
+
+2. If 'Git' is not installed, you will not be able to clone the repo from your command line. More information can be found here:
+    https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+3. You will need a Google API key to use this application. If you do not have one, it can be obtained here:
     https://developers.google.com/maps/gmp-get-started
 
-2. Press the button that says "Get Started" and follow the steps
+4. Press the button that says "Get Started" and follow the steps
 
-3. Make sure your API key is ENABLED for use with the Google Directions API 
+5. Make sure your API key is ENABLED for use with the Google Directions API 
 
 
 --Once you have completed the Prerequisites, follow the steps below to run the application.--
 
 
 --Step 1--
-Clone this repository using the following command:
+Open your command line/terminal and clone this repository using the following command:
     'git clone https://github.com/m-maka/CIS-422-Project1.git'
 
 --Step 2--
-Change directories so you are in the 'src' folder:
+Change directories so you are in the 'src' folder using the following command:
     'cd src'
 
 --Step 3--
-Input your API key in settings.py:
+Input your API key (see Prerequisites) in settings.py:
     Open the 'settings.py' file and replace the <INSERT API KEY> inside the quotes with your own API key 
 
 --Step 4--
+Create a virtual environment within the 'src' folder by using the following command:
+    'python -m venv env'
+
+--Step 5--
+Activate the virtual environment using the following command for your system:
+    (OS X & Linux)
+    - 'source env/bin/activate'
+
+    (Windows)
+    -'env\Scripts\activate'
+
+--Step 6--
 Install dependecies for the program from the requirements.txt using the following command:
     'pip install -r requirements.txt'
 
---Step 5--
-Activate your environment using the following command:
-    'venv\Scripts\activate'
-
---Step 6--
+--Step 7--
 Start the application by running start.sh:
     'sh start.sh'
