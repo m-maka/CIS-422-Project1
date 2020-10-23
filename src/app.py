@@ -8,6 +8,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.config['UPLOAD_EXTENSIONS'] = set(['.gpx'])
 app.config['UPLOAD_PATH'] = 'uploads'
+app.secret_key = setting.COOKIE_KEY
 app.KEY = setting.API_KEY
 
 
@@ -51,7 +52,8 @@ def upload_files():
     uploaded_file = request.files['file']
     # Holds 
     filename = secure_filename(uploaded_file.filename)
-    if filename != '':
+    if filename == '':
+        flash("No file selected")
         file_ext = os.path.splitext(filename)[1]
         if file_ext not in app.config['UPLOAD_EXTENSIONS']:
             #Redirect to index if not a gpx file
