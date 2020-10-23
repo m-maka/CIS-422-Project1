@@ -1,1 +1,22 @@
 This will be a startup guide of how to use the program. Read through and follow the steps to get started with the program and understand how to use it correctly
+
+# Once you have your server running
+Once your server is running, navigate to 'localhost:5000' in your preferred web browser.
+You should see a button marked 'Choose File', click this and navigate to the .gpx file that you want to convert into a cue sheet. Select it, and click open.
+If you have completed this step correctly, you should now see the title of your chosen file next to the Choose File button(as opposed to 'No file chosen').
+Assuming you see your file, click submit when you are ready to create your cue sheet.
+After a brief processing time, you will be presented with your cue sheet. Currently there is no way to download the instructions, so you will have to manually copy and 
+paste them to a file of your choosing.
+
+# Known issues/limitations
+
+### Unkown paths/roads
+Our application is powered by Google. A result of this is if Google doesn't recognize a path/road taken in the track, 
+the outputted cue sheet results will vary and cannot be guaranteed as accurate.
+
+### Designed for bicyclists
+While this application will probably also work for driving, and somewhat for running/walking in urban areas, bicyclists are the target demographic.
+
+### Input/Output is not always 1 to 1
+In some cases, such as U-Turns, Google will output slightly different instructions/distances for U-turns. This means if a gpx file is ran multiple times
+the route overall will be the same, but small details could vary.
