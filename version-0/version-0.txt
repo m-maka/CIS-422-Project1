@@ -1,0 +1,23 @@
+
+About this directory:
+
+Initially, this application was going to be made using a different approach
+than is actually implemented at this time. That approach was going to make use
+of the UTM coordinate system to calculate the direction of turns in the track.
+
+The purpose of this directory is to store some of the rescued code that would have been useful if the other approach had been taken, namely the UTM conversion functions and a function to detect the angle of the turns based on the UTM coordinates, in case someone decides to develop this app further.
+
+Brief decription:
+
+direction.py (Scrapped): This file was intended to calculate the direction of a]
+turn on the track by using points near the turn and the UTM format to calculate
+the angle of the turn. Due to it being very dependent on other files, we decided
+it was best to not include it to give any future developer maximum freedom.
+
+trackconversion.py: Contains functions to convert a list of latlong coordinates
+into the UTM coordinate system, with a slight modification. It also contains
+functions to calculate distances between each pair of points, or two individual
+points, both using UTM and the Pythagorean Theorem and the geopy.distance module
+on the latlong coordinates. The results of both were slightly different, but due
+to the change in approach, we were unable to test which was the most accurate
+one.
