@@ -4,6 +4,12 @@
     <title>GPX File Upload</title>
   </head>
   <body>
+    <!-- Taken from Michal's form.html repo -->>
+    <!-- This part is for error messages "flashed" by flask -->
+    {% for message in get_flashed_messages() %}
+    <p><strong>{{ message }}</strong></p>
+    {% endfor %}
+
     <h1>GPX File Upload</h1>
       <img src="{{url_for('static', filename='colored_google.png')}}" />
     <p>Please upload you GPX file to calculate your directions:</p>
