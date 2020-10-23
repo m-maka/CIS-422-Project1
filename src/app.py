@@ -1,5 +1,6 @@
 import os
-import execute 
+import gpxparse
+import findturns
 from flask import Flask, render_template, request, redirect, url_for, abort, send_from_directory, g, flash 
 from werkzeug.utils import secure_filename
 
@@ -11,17 +12,13 @@ app.config['UPLOAD_PATH'] = 'uploads'
 ################################################################
 # API functions for Flask App
 ################################################################
-def execute(filename, apikey):
-    
+def execute(filename):
     # Read the gpx file and turn it into a list of Lattitude/Longitude
     # Coordinates
     coordinates = gpxparse.read(filename)
     
-    # Read Google API key from text file and insert it
-    keyfile = open(apikey)
-    key = keyfile.read().replace("\n", " ")
-    keyfile.close()
-    gmaps = findturns.googlemaps.Client(key=key)
+    # Create Google client to use Google api
+    gmaps = findturns.googlemaps.Client(key=KEY)
     
     # Divide the track into smaller segments that the Google API can work with
     segments = findturns.createSegments(coordinates)
@@ -29,7 +26,13 @@ def execute(filename, apikey):
     # Get directions for the created track segments
     directions = findturns.getDirections(gmaps, segments)
 
-    return directions 
+    # Parse directions into a list of tuples
+    directions = findturns.parseDirections(directions)
+
+    # Convert directions to a string
+    stringDirections = findturns.directionsToString(directions)
+
+    return stringDirections 
 
 
 ################################################################
@@ -55,7 +58,7 @@ def upload_files():
         full_path = os.path.join(app.config['UPLOAD_PATH'], filename)
         uploaded_file.save(full_path)
         #execute function will pass the file path in and use it to open/read the file
-        g.results = execute(full_path, api_key)
+        g.results = execute(full_path)
     return render_template('display.html')
 
 

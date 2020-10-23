@@ -12,7 +12,7 @@ import googlemaps
 def directionsToString(instructions):
     '''
     Takes in the instructions list created by parseDirections
-    and writes it to a text file, in a readable HTML form
+    and formats it into a human readable string
     '''
     directions = ""
     for line in instructions:
