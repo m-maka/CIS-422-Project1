@@ -51,6 +51,20 @@ read -> createSegments -> getDirections -> parseDirections -> directionsToString
 
 The "test" directory contains files that can be used for testing the source code.
 
+# Known issues/limitations
+
+### Unkown paths/roads
+Our application is powered by Google, utilzing the Google maps directions api to convert a gpx file into a readable cue sheet. A result of this is if Google doesn't recognize
+a path/road taken in the track, the outputted cue sheet results will vary and cannot be guaranteed as accurate.
+
+### Designed for bicyclists
+Currently the request specifies bicycling as the mode of transportation, therefore results are tailored to biking. While this application will probably also work for driving,
+and somewhat for running/walking in urban areas, bicyclists are the target demographic.
+
+### Input/Output is not always 1 to 1
+In some cases, such as U-Turns, Google will output slightly different instructions/distances to complete the U-turn in the track. This means if a gpx file is ran multiple times
+the route overall will be the same, but small details could vary.
+
 # Future Development and other versions
 
 This program started out by attempting to run a binary search on a set of points to pinpoint a turn, to then be able to recognize the path that was taken and translate it into instructions. Due to limitations with the geocoding services that we found available to us, we then proceeded to change approach and use the Google Maps API.
