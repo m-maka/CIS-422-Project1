@@ -41,7 +41,11 @@ Input your API key (see Prerequisites) in settings.py:
 
 --Step 4--
 Create a virtual environment within the 'src' folder by using the following command:
-    'py -m venv env'
+    (OS X & Linux)
+    - 'python3 -m venv env'
+    
+    (Windows)
+    - 'py -m venv env'
 
 --Step 5--
 Activate the virtual environment using the following command for your system:
@@ -49,7 +53,7 @@ Activate the virtual environment using the following command for your system:
     - 'source env/bin/activate'
 
     (Windows)
-    -'env\Scripts\activate'
+    - 'env\Scripts\activate'
 
 --Step 6--
 Install dependecies for the program from the requirements.txt using the following command:

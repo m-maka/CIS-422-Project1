@@ -65,7 +65,3 @@ def upload_files():
         g.results = execute(full_path)
     return render_template('display.html')
 
-'''
-if __name__ == '__main__':
-   app.run(debug = True)
-'''
