@@ -1,5 +1,13 @@
 Document to explain and list important components and aspects of the project by listing what they do, and how they connect and interact with each other.
 
+# Purpose, what is here and future plans
+
+The purpose of this program is to give bicyclists a way to convert their gpx tracks into human readable cue sheets. This program is intended to take in a .gpx file
+and return instructions in some form readable by humans.
+
+Currently a Flask front end is used for uploading .gpx files and displaying the resutling cue sheet, with a Python back end for processing. 
+Future changes to consider: multi-track processing, the ability to download the instructions (as opposed to copy pasting them to a text file).
+
 # Program Organization
 
 ## Files 
@@ -8,18 +16,22 @@ The outer section of the program is split into 3 files:
 'tests': contains all code/files related to testing the application, including the instructions/documentation on how to run the tests
 'documents': contains the documentation on the authors of the program, as well as the detailed programmer and user manuals
 'version-0': contains information about the first version of the applictaion, in which we were planning to use binary search instead of routing.
-'src': contains the app
+'src': contains the data relevant to running the application
 specifically 'src'contains:
 '__pychache__': the cache for the virtual environment
-'static': which contains the 'Powered By Google' image for use within the Flask application
-'templates': which contains 'index.html' the landing page of the Flask application and 'display.html' the webpage used to show the direction results
-'uploads': which is used by Flask to store the gpx files uploaded by users
-'venv': which contains information related to the virtual environment
-### Python files
-The program is made up of three main files: 
-'gpxparse.py': which handles the conversion of a gpx file into a list of (lat, long) tuples
-'findturns.py': which handels taking the lat longs from gpxparse, and converting them into instructions a human can read
+'static': contains assets for use within the Flask application (such as the powered by Google image)
+'templates': contains the HTML templates for use within Flask (such as 'index.html' and 'display.html') 
+'uploads': is used by Flask to store the gpx files uploaded by users
+'venv': contains information related to the virtual environment
+'src' also contains the python files that make up the application, as well as files needed for installation
+
+### Files
+'gpxparse.py': handles everything related to the conversion of a gpx file into a list of (lat, long) tuples
+'findturns.py': handels taking the lat longs from gpxparse, and converting them into instructions a human can read
 'app.py': is the main driver of the program, it stores the information to run the Flask app, and makes the calls to 'gpxparse.py' and 'findturns.py'
+'settings.py: is used to house the secret key, as well as the Google api key
+'requirements.txt' contains the required modules to be installed by pip
+'start.sh' contains a script to launch the Flask server
 
 ## Functions
 ### gpxparse.py
@@ -53,6 +65,9 @@ The "test" directory contains files that can be used for testing the source code
 
 # Known issues/limitations
 
+### Only works with gpx files
+Tracks in other formats of files will not work, must be .gpx
+
 ### Unkown paths/roads
 Our application is powered by Google, utilzing the Google maps directions api to convert a gpx file into a readable cue sheet. A result of this is if Google doesn't recognize
 a path/road taken in the track, the outputted cue sheet results will vary and cannot be guaranteed as accurate.
@@ -65,7 +80,11 @@ and somewhat for running/walking in urban areas, bicyclists are the target demog
 In some cases, such as U-Turns, Google will output slightly different instructions/distances to complete the U-turn in the track. This means if a gpx file is ran multiple times
 the route overall will be the same, but small details could vary.
 
-# Future Development and other versions
+### gpx files are considered as one track
+Currently the way the program reads the gpx file, all of its contents are considered as one long track. If the gpx file holds multiple tracks, they will be treated as one
+long track for the purposes of creating a cue sheet
+
+# Previous versions
 
 This program started out by attempting to run a binary search on a set of points to pinpoint a turn, to then be able to recognize the path that was taken and translate it into instructions. Due to limitations with the geocoding services that we found available to us, we then proceeded to change approach and use the Google Maps API.
 
