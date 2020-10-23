@@ -1,0 +1,37 @@
+0.0 mi: Head west on Fairview Rd toward S 114th St and travel for 0.6 mi
+0.6 mi: Turn left onto S 120th St and travel for 1.7 mi
+2.3 mi: Turn left onto Mitchell Rd and travel for 0.8 mi
+3.1 mi: Turn right onto S 111th St and travel for 1.3 mi
+4.4 mi: Continue onto Buffalo Rd and travel for 0.7 mi
+5.1 mi: Turn left onto S 120th St and travel for 0.2 mi
+5.3 mi: Continue onto Buffalo Rd and travel for 0.3 mi
+5.6 mi: Turn left onto Cottonwood Ln and travel for 1.2 mi
+6.8 mi: Continue onto S 132nd St and travel for 377 ft
+6.87 mi: Turn left onto Lakeview Dr and travel for 72 ft
+6.88 mi: Head south on S 132nd St toward Buffalo Rd and travel for 358 ft
+6.95 mi: Continue onto Buffalo Rd and travel for 1.2 mi
+8.15 mi: Turn left onto MoPac Trail and travel for 2.4 mi
+10.55 mi: Slight left to stay on MoPac Trail and travel for 0.2 mi
+10.75 mi: Turn right to stay on MoPac Trail and travel for 472 ft
+10.84 mi: Turn right onto NE-31 and travel for 161 ft
+10.87 mi: Turn right onto NE-50 S and travel for 0.9 mi
+11.77 mi: Turn left onto Main St and travel for 0.3 mi
+12.07 mi: Head north on Main St toward E 2nd St and travel for 0.3 mi
+12.37 mi: Turn right onto NE-50 N and travel for 0.9 mi
+13.27 mi: Turn right toward MoPac Trail and travel for 75 ft
+13.28 mi: Turn left onto MoPac Trail and travel for 4.5 mi
+17.78 mi: Slight left to stay on MoPac Trail and travel for 0.4 mi
+18.18 mi: Head east on MoPac Trail and travel for 374 ft
+18.25 mi: Slight left to stay on MoPac Trail and travel for 0.2 mi
+18.45 mi: Turn right toward S Railroad St and travel for 16 ft
+18.45 mi: Turn left onto S Railroad St and travel for 0.1 mi
+18.55 mi: Make a U-turn at Cedar St and travel for 331 ft
+18.61 mi: Turn right onto Main St and travel for 0.1 mi
+18.71 mi: Turn right onto NE-50 N/ and travel for 341 ft
+18.77 mi: Turn right toward NE-50 N and travel for 420 ft
+18.85 mi: Turn right onto NE-50 N and travel for 0.1 mi
+18.95 mi: Turn right onto Park Dr and travel for 0.3 mi
+19.25 mi: Turn right onto Platteview Rd and travel for 351 ft
+19.32 mi: Turn right and travel for 197 ft
+19.36 mi: Turn right and travel for 1.1 mi
+20.46 mi: Head east on Fairview Rd and travel for 2.6 mi

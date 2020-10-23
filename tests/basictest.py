@@ -6,14 +6,7 @@ Running this file will test the application for basic functionality, such as:
 
 To keep things organized and concise, special cases will be tested on separate 
 files
-
-NOTE: Because of the use of the way this file is set up and how sys is used
-to find the right path, this test file MUST be run in its "test" directory.
 '''
-
-import sys
-
-sys.path.insert(0, '../src/')
 
 import execute
 
@@ -21,14 +14,17 @@ def test1():
 
 	success = False
 	
-	# Input a specific gpx file into the program
-	# Keep a sample of what this specific file should return for latlong
-	# coordinates
-	# Compare the expected output and the actual output.
+	# Input the GPX File and the key.txt file
+	output = execute.execute("2017_GONG_Ride_25_Mile_Route.gpx", "key.txt")
 
-	# Send the list over to the function that gets directions and instructions
-	# keep a sample of what the instructions should be
-	# Compare the expected output and the actual output
+	# Read the file with the expected output
+	t_1_result = open("test1result.txt")
+	expected = t_1_result.read()
+	t_1_result.close()
+
+    # Compare actual and expected output
+	if output == expected:
+		success = True
 
 	return success
 
@@ -37,14 +33,16 @@ def test2():
 
 	success = False
 	
-	# Input a specific gpx file into the program
-	# Keep a sample of what this specific file should return for latlong
-	# coordinates
-	# Compare the expected output and the actual output.
+	output = execute.execute("2017_GONG_Ride_50_Mile_Route.gpx", "key.txt")
 
-	# Send the list over to the function that gets directions and instructions
-	# keep a sample of what the instructions should be
-	# Compare the expected output and the actual output
+	# Read the file with the expected output
+	t_2_result = open("test2result.txt")
+	expected = t_2_result.read()
+	t_2_result.close()
+
+    # Compare actual and expected output
+	if output == expected:
+		success = True
 
 	return success
 
@@ -52,15 +50,17 @@ def test2():
 def test3():
 
 	success = False
-	
-	# Input a specific gpx file into the program
-	# Keep a sample of what this specific file should return for latlong
-	# coordinates
-	# Compare the expected output and the actual output.
 
-	# Send the list over to the function that gets directions and instructions
-	# keep a sample of what the instructions should be
-	# Compare the expected output and the actual output
+	output = execute.execute("2019_GONG_Ride.gpx", "key.txt")
+	
+	# Read the file with the expected output
+	t_3_result = open("test3result.txt")
+	expected = t_3_result.read()
+	t_3_result.close()
+
+    # Compare actual and expected output
+	if output == expected:
+		success = True
 
 	return success
 
