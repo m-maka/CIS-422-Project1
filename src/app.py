@@ -1,7 +1,7 @@
 import os
 import gpxparse
 import findturns
-import setting 
+import settings
 from flask import Flask, render_template, request, redirect, url_for, abort, send_from_directory, g, flash 
 from werkzeug.utils import secure_filename
 
