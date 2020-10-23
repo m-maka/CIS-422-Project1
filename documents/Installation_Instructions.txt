@@ -63,6 +63,10 @@ Install dependecies for the program from the requirements.txt using the followin
 Start the application by running start.sh:
     'sh start.sh'
 
+Once you have completed step 7, you should see several Flask related messages, the last one being: '* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)'
+This means your server is running, and you are good to use the application.
+For further instructions, go to 'documents/User_Documentation'
+
 --Step 8--
-To end the program:
+When you are ready to end the program:
     '<ctrl> + C'
