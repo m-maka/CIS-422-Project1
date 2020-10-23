@@ -9,14 +9,15 @@ Powered by Google Maps
 
 import googlemaps
 
-def instructionsToText(instructions):
+def directionsToString(instructions):
     '''
     Takes in the instructions list created by parseDirections
     and writes it to a text file, in a readable HTML form
     '''
-    with open("uploads/directions.txt", 'w') as directions:
-        for line in instructions:
-            directions.write(f"{line[2]}: {line[1]} and travel for {line[0]}\n")
+    directions = ""
+    for line in instructions:
+        directions += f"{line[2]}: {line[1]} and travel for {line[0]}\n"
+    return directions
         
 
 def parseDirections(directions):
@@ -35,8 +36,10 @@ def parseDirections(directions):
             distance = step['distance']['text']
             line = step['html_instructions']
 
-            # remove destination messages
-            index = line.find('<d')
+            # remove destination messages/html
+            line = line.replace("<b>", "")
+            line = line.replace("</b>", "")
+            index = line.find('<')
             if index != -1:
                 line = line[:index]
                 
