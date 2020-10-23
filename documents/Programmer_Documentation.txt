@@ -5,7 +5,7 @@ Document to explain and list important components and aspects of the project by 
 ## Files 
 ### Folders
 The outer section of the program is split into 3 files:
-'tests': contains all code/files related to testing the application
+'tests': contains all code/files related to testing the application, including the instructions/documentation on how to run the tests
 'documents': contains the documentation on the authors of the program, as well as the detailed programmer and user manuals
 'version-0': contains information about the first version of the applictaion, in which we were planning to use binary search instead of routing.
 'src': contains the app
@@ -50,6 +50,20 @@ read -> createSegments -> getDirections -> parseDirections -> directionsToString
 # Testing
 
 The "test" directory contains files that can be used for testing the source code.
+
+# Known issues/limitations
+
+### Unkown paths/roads
+Our application is powered by Google, utilzing the Google maps directions api to convert a gpx file into a readable cue sheet. A result of this is if Google doesn't recognize
+a path/road taken in the track, the outputted cue sheet results will vary and cannot be guaranteed as accurate.
+
+### Designed for bicyclists
+Currently the request specifies bicycling as the mode of transportation, therefore results are tailored to biking. While this application will probably also work for driving,
+and somewhat for running/walking in urban areas, bicyclists are the target demographic.
+
+### Input/Output is not always 1 to 1
+In some cases, such as U-Turns, Google will output slightly different instructions/distances to complete the U-turn in the track. This means if a gpx file is ran multiple times
+the route overall will be the same, but small details could vary.
 
 # Future Development and other versions
 

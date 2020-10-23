@@ -12,6 +12,7 @@ Testing instructions:
 	- "test1result.txt"
 	- "test2result.txt"
 	- "test3result.txt"
+	- "test3result2.txt"
 	- "basictest.py"
 	- "execute.py"
 
@@ -24,5 +25,7 @@ Also make sure that, if you are going to test outside of the repository, that yo
 2: One you run basictest.py with the Python3 command, you will be asked whether you want to run test 1, skip it, or abort testing. The same will happen for the following tests.
 
 3: At the end, if the results still match the expected output, You'll be told whether the tests were succesful, failures, or if they didn't take place at all.
+
+Note: Please note that there may be some slight variation in the results, so it may happen that sometimes a result comes up as false. Hewever, we have tested that in general, it accounts for the same route, but it may have gotten confused around a weird u-turn.
 
 Disclaimer: Since our program relies on the Google Maps API, these tests should work well, for being on a well defined route. Google might not recognize paths that are outside of its records.

@@ -7,6 +7,11 @@ of the UTM coordinate system to calculate the direction of turns in the track.
 
 The purpose of this directory is to store some of the rescued code that would have been useful if the other approach had been taken, namely the UTM conversion functions and a function to detect the angle of the turns based on the UTM coordinates, in case someone decides to develop this app further.
 
+NOTE: The modules used for this (utm and geopy) DO NOT get installed when one runs the program. If you want to work with this functions, you will have to install them manually with the following commands:
+
+pip install utm
+pip install geopy
+
 Brief decription:
 
 direction.py (Scrapped): This file was intended to calculate the direction of a]

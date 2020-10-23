@@ -1,0 +1,41 @@
+0.0 mi: Head west on Fairview Rd toward S 114th St and travel for 0.6 mi
+0.6 mi: Turn left onto S 120th St and travel for 1.7 mi
+2.3 mi: Turn left onto Mitchell Rd and travel for 0.8 mi
+3.1 mi: Turn right onto S 111th St and travel for 1.3 mi
+4.4 mi: Continue onto Buffalo Rd and travel for 0.7 mi
+5.1 mi: Turn left onto S 120th St and travel for 0.2 mi
+5.3 mi: Continue onto Buffalo Rd and travel for 0.3 mi
+5.6 mi: Turn left onto Cottonwood Ln and travel for 1.2 mi
+6.8 mi: Continue onto S 132nd St and travel for 377 ft
+6.87 mi: Turn left onto Lakeview Dr and travel for 72 ft
+6.88 mi: Head south on S 132nd St toward Buffalo Rd and travel for 358 ft
+6.95 mi: Continue onto Buffalo Rd and travel for 1.2 mi
+8.15 mi: Turn left onto MoPac Trail and travel for 1.3 mi
+9.45 mi: Turn right onto Cornish Rd and travel for 3.5 mi
+12.95 mi: Turn left onto S 192nd St and travel for 1.4 mi
+14.35 mi: Turn left onto NE-31 and travel for 2.2 mi
+16.55 mi: Head east on NE-31 toward Riha Rd and travel for 1.0 mi
+17.55 mi: Turn right onto NE-50 S and travel for 0.9 mi
+18.45 mi: Turn left onto Main St and travel for 0.3 mi
+18.75 mi: Turn right onto W 3rd St and travel for 98 ft
+18.77 mi: Make a U-turn and travel for 98 ft
+18.79 mi: Turn left onto Main St and travel for 0.3 mi
+19.09 mi: Turn right onto NE-50 N and travel for 0.9 mi
+19.99 mi: Turn right toward MoPac Trail and travel for 75 ft
+20.0 mi: Turn left onto MoPac Trail and travel for 0.5 mi
+20.5 mi: Head northwest on MoPac Trail toward Cornish Rd and travel for 4.0 mi
+24.5 mi: Slight left to stay on MoPac Trail and travel for 0.4 mi
+24.9 mi: Slight left to stay on MoPac Trail and travel for 0.2 mi
+25.1 mi: Turn right toward S Railroad St and travel for 16 ft
+25.1 mi: Turn left onto S Railroad St and travel for 0.1 mi
+25.2 mi: Make a U-turn at Cedar St and travel for 331 ft
+25.26 mi: Turn right onto Main St and travel for 0.1 mi
+25.36 mi: Turn right onto NE-50 N/ and travel for 341 ft
+25.42 mi: Turn right toward NE-50 N and travel for 420 ft
+25.5 mi: Turn right onto NE-50 N and travel for 0.1 mi
+25.6 mi: Turn right onto Park Dr and travel for 0.3 mi
+25.9 mi: Turn right onto Platteview Rd and travel for 351 ft
+25.97 mi: Turn right and travel for 197 ft
+26.01 mi: Turn right and travel for 141 ft
+26.04 mi: Head east toward Fairview Rd and travel for 1.1 mi
+27.14 mi: Turn right onto Fairview Rd and travel for 2.6 mi
