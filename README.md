@@ -30,4 +30,4 @@ documents: Contains text files of all documentation for the project
 
 tests: Contains files that can be used to test whether the source code is working correctly.
 
-version-0-files (working name): Contains files that belonged to the first pursued version of this program. More info in the txt file.
+version-0: Contains files that belonged to the first pursued version of this program. More info in the txt file.
