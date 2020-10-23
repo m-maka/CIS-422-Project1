@@ -8,7 +8,6 @@ app.config['UPLOAD_EXTENSIONS'] = set(['.gpx'])
 app.config['UPLOAD_PATH'] = 'uploads'
 
 
-
 ################################################################
 # API functions for Flask App
 ################################################################
