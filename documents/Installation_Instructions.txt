@@ -28,8 +28,12 @@ Open your command line/terminal and clone this repository using the following co
     'git clone https://github.com/m-maka/CIS-422-Project1.git'
 
 --Step 2--
-Change directories so you are in the 'src' folder using the following command:
-    'cd src'
+Enter the 'CIS-422-Project1' directory and move into the 'src' folder using the following command:
+    (OS X & Linux)
+    'cd CIS-422-Project1/src'
+
+    (Windows)
+    'cd CIS-422-Project1\src'
 
 --Step 3--
 Input your API key (see Prerequisites) in settings.py:
