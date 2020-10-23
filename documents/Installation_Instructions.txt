@@ -5,9 +5,26 @@ Max Aguirre
 Brandon Bower
 Mapuana Maka
 
---Step One--
-Install python
-https://python.org/downloads/
+--Step 1--
+Clone this repository using the following command:
+    'git clone https://github.com/m-maka/CIS-422-Project1.git'
 
---Step Two--
-(Do the following steps differ depending on the OS?)
+--Step 2--
+Change directories so you are in the 'src' folder:
+    'cd src'
+
+--Step 3--
+Input your API key in settings.py:
+    Open the 'settings.py' file and replace the <INSERT API KEY> inside the quotes with your own API key 
+
+--Step 4--
+Install dependecies for the program from the requirements.txt using the following command:
+    'pip install -r requirements.txt'
+
+--Step 5--
+Activate your environment using the following command:
+    'venv\Scripts\activate'
+
+--Step 6--
+Start the application by running start.sh:
+    'sh start.sh'
