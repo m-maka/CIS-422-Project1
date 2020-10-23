@@ -20,7 +20,7 @@ The program then outputs a list of directions to the user, which can be used to 
 
 ## Build Process Summary
 
-The following section briefly describes the build process for the application.
+Please refer to the 'Installation_Instructions.txt' in the 'documents' folder
 
 ## Subdirectory Information
 
