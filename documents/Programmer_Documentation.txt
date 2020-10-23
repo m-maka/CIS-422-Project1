@@ -68,7 +68,7 @@ The "test" directory contains files that can be used for testing the source code
 ### Only works with gpx files
 Tracks in other formats of files will not work, must be .gpx
 
-### Unkown paths/roads
+### Unknown paths/roads
 Our application is powered by Google, utilzing the Google maps directions api to convert a gpx file into a readable cue sheet. A result of this is if Google doesn't recognize
 a path/road taken in the track, the outputted cue sheet results will vary and cannot be guaranteed as accurate.
 
